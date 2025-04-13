@@ -16,6 +16,9 @@ $router->patch('/users/{id}', 'UserController@update'); // Partial update
 $router->delete('/users/{id}', 'UserController@destroy'); // Delete user
 $router->delete('/users/{id}', 'UserController@delete');
 
+$router->get('/usersjob', 'UserJobController@index'); // Get all user jobs
+$router->get('/userjob/{id}', 'UserJobController@show'); // Get user job by ID
+
 // ✅ Test route
 $router->get('/test', function () {
     return response()->json(['message' => 'Test route is working!'], 200);
